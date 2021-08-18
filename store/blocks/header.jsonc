@@ -33,6 +33,7 @@
       "minicart.v2"
     ]
   },
+  
   "flex-layout.col#spacer": {
     "props": {
       "width": "grow"
@@ -73,7 +74,12 @@
       "fullWidth": true
     }
   },
+  
+   
+  
+  
   "drawer": {
     "children": []
   }
+  
 }
