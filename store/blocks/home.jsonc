@@ -1,8 +1,36 @@
 {
   "store.home": { 
     "blocks": [
-      "rich-text"
+      "rich-text",
+      "list-context.image-list#demo"
     ]
+  },
+
+  "list-context.image-list#demo": {
+    "children": ["slider-layout#demo-images"],
+    "props": {
+      "height": 650,
+      "images": [
+        {
+          "image": "https://moikana.vteximg.com.br/arquivos/ids/317791/Banner_Desktop_PV_22.jpg?v=637638813955470000",
+          "description": "something something"
+        },
+        {
+          "image": "https://moikana.vteximg.com.br/arquivos/ids/317791/Banner_Desktop_PV_22.jpg?v=637638813955470000",
+          "description": "something something"
+        }
+      ]
+    }
+  },
+  "slider-layout#demo-images": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true
+    }
   },
   "rich-text": { 
     "props": { 
