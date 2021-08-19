@@ -7,7 +7,8 @@
   },
   "header-layout.desktop": {
     "children": [
-      "sticky-layout#desktop"
+      "sticky-layout#desktop",
+      "tab-layout#home"
     ]
   },
   "sticky-layout#desktop": {
@@ -79,7 +80,8 @@
   
   
   "drawer": {
-    "children": []
+    "children": [
+     ]
   }
   
 }

@@ -3,8 +3,41 @@
     "blocks": [
       "rich-text",
       "list-context.image-list#demo"
+      
     ]
   },
+  "tab-layout#home": {
+  "children": [
+    "tab-list#home"
+     
+  ],
+  "props": {
+    "blockClass": "home",
+    "defaultActiveTabId": "home1"
+  }
+},
+"tab-list#home": {
+  "children": [
+    "tab-list.item#home1",
+    "tab-list.item#home2"
+  ]
+},
+"tab-list.item#home1": {
+  "props": {
+    "tabId": "home1",
+    "label": "Home 1",
+    "defaultActiveTab": true
+  }
+},
+"tab-list.item#home2": {
+  "props": {
+    "tabId": "home2",
+    "label": "Home 2"
+  }
+},
+"minicart-product-list#example": {
+  "blocks": ["product-list"]
+},
 
   "list-context.image-list#demo": {
     "children": ["slider-layout#demo-images"],
@@ -40,4 +73,5 @@
       "font": "t-heading-1"
     }
   }
+  
 }
