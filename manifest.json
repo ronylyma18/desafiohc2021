@@ -48,6 +48,6 @@
     "vtex.add-to-cart-button": "0.x",
     "vtex.category-menu": "2.x",
     "vtex.menu": "2.x"
-  },
+  }, 
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
