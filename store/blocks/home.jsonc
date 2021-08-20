@@ -1,8 +1,12 @@
 {
   "store.home": { 
     "blocks": [
-      "rich-text",
-      "list-context.image-list#demo"
+      "rich-text#vintage",
+      "list-context.image-list#demo",
+      "rich-text#shelf-title",
+      "list-context.product-list"
+      
+      
       
     ]
   },
@@ -42,14 +46,15 @@
   "list-context.image-list#demo": {
     "children": ["slider-layout#demo-images"],
     "props": {
+     
       "height": 650,
       "images": [
         {
-          "image": "https://moikana.vteximg.com.br/arquivos/ids/317791/Banner_Desktop_PV_22.jpg?v=637638813955470000",
+          "image": "https://maratonavirtual.s3.sa-east-1.amazonaws.com/6iibxhv7jzzdn2749uhoxub2fdjf?response-content-disposition=inline%3B%20filename%3D%22BANNER-WOOD.png%22%3B%20filename%2A%3DUTF-8%27%27BANNER-WOOD.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIRHGNFPZAGTZ7SUA%2F20210820%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210820T130407Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=7fba8aefcc3e85a42f04d805cb7915fcf33a268b2861decf12f8db0b4bb07abf",
           "description": "something something"
         },
         {
-          "image": "https://moikana.vteximg.com.br/arquivos/ids/317791/Banner_Desktop_PV_22.jpg?v=637638813955470000",
+          "image": "https://maratonavirtual.s3.sa-east-1.amazonaws.com/6iibxhv7jzzdn2749uhoxub2fdjf?response-content-disposition=inline%3B%20filename%3D%22BANNER-WOOD.png%22%3B%20filename%2A%3DUTF-8%27%27BANNER-WOOD.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIRHGNFPZAGTZ7SUA%2F20210820%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210820T130407Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=7fba8aefcc3e85a42f04d805cb7915fcf33a268b2861decf12f8db0b4bb07abf",
           "description": "something something"
         }
       ]
@@ -65,13 +70,64 @@
       "infinite": true
     }
   },
-  "rich-text": { 
+  "rich-text#vintage": { 
     "props": { 
+      "id": "info-card-vintage",
+      "isFullModeStyle": false,
       "text": "VTEX Store Framework",
       "textAlignment": "CENTER",
       "textPosition": "CENTER",
-      "font": "t-heading-1"
+      "font": "t-heading-1",
+      "blockClass": "vintage"
     }
+  },
+  "rich-text#shelf-title": {
+    "props": {
+      "text": "## Você está vendo provas de:",
+      "blockClass": "shelfTitle",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "list-context.product-list": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#demo-products"]
+  },
+  "slider-layout#demo-products": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 2,
+        "tablet": 2,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf"
+    }
+  },
+
+  "product-summary.shelf": {
+    "children": [
+      "modal-trigger#quickview",
+      "product-summary-name",
+      "product-selling-price",
+      "add-to-cart-button"
+
+    ]
+  },
+  "modal-trigger#quickview": {
+    "children": ["product-summary-image", "modal-layout#quickview"]
+  },
+  "modal-layout#quickview": {
+    "children": [
+      "product-summary-name",
+      "product-images",
+      "product-summary-sku-selector",
+      "product-summary-quantity",
+      "add-to-cart-button"
+    ]
   }
+
+  
   
 }
